@@ -2,5 +2,27 @@
 # These configs will be merged with the warp routes in the configured registry
 # The input here is typically the output of the Hyperlane CLI warp deploy command
 ---
-tokens: []
+tokens: [
+  {
+    chainName: 'deepbrainchaintestnet',
+    standard: 'EvmHypCollateral',
+    decimals: 18,
+    # logoURI: '/deployments/warp_routes/USDT/logo.svg',
+    symbol: 'DGC',
+    name: 'DecentralGPT',
+    addressOrDenom: "0xC260ed583545d036ed99AA5C76583a99B7E85D26",
+    collateralAddressOrDenom: "0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d",
+    connections: [{ token: 'ethereum|bsctestnet|0x73aB51830d853739b8aC044235FC470f681762bD' }]
+  },
+  {
+    chainName: 'bsctestnet',
+    standard: 'EvmHypSynthetic',
+    decimals: 18,
+    # logoURI: '/deployments/warp_routes/USDT/logo.svg',
+    symbol: 'DGC',
+    name: 'DecentralGPT',
+    addressOrDenom: "0x73aB51830d853739b8aC044235FC470f681762bD",
+    connections: [{ token: 'ethereum|deepbrainchaintestnet|0xC260ed583545d036ed99AA5C76583a99B7E85D26' }]
+  }
+]
 options: {}

@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  warp-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    stop_grace_period: 5m
+    container_name: 'hyperlane-warp-ui'
+    ports:
+      - 3000:3000
+    environment:
+      NEXT_PUBLIC_WALLET_CONNECT_ID:
+      NEXT_PUBLIC_REGISTRY_URL: https://github.com/frank0528/hyperlane-registry
+      NEXT_PUBLIC_REGISTRY_BRANCH: develop
+    command:
+      - yarn
+      - dev
