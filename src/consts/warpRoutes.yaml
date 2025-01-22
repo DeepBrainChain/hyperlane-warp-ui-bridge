@@ -10,9 +10,9 @@ tokens: [
     # logoURI: '/deployments/warp_routes/USDT/logo.svg',
     symbol: 'DGC',
     name: 'DecentralGPT',
-    addressOrDenom: "0xEec914Ca900bE4F2EDA8aB2141F7f47B0878c6Ce",
+    addressOrDenom: "0xCB6913B40F56e1482b662c337A366Cc8d6f12e51",
     collateralAddressOrDenom: "0xC260ed583545d036ed99AA5C76583a99B7E85D26",
-    connections: [{ token: 'ethereum|bsctestnet|0xE9d6828536807721317754a13F1624AA8164b2Be' }]
+    connections: [{ token: 'ethereum|bsctestnet|0xD744eB383CF4a695844bC0f93469C8C000046429' }]
   },
   {
     chainName: 'bsctestnet',
@@ -21,8 +21,8 @@ tokens: [
     # logoURI: '/deployments/warp_routes/USDT/logo.svg',
     symbol: 'DGC',
     name: 'DecentralGPT',
-    addressOrDenom: "0xE9d6828536807721317754a13F1624AA8164b2Be",
-    connections: [{ token: 'ethereum|deepbrainchaintestnet|0xEec914Ca900bE4F2EDA8aB2141F7f47B0878c6Ce' }]
+    addressOrDenom: "0xD744eB383CF4a695844bC0f93469C8C000046429",
+    connections: [{ token: 'ethereum|deepbrainchaintestnet|0xCB6913B40F56e1482b662c337A366Cc8d6f12e51' }]
   }
 ]
 options: {}
