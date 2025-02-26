@@ -4,25 +4,25 @@
 ---
 tokens: [
   {
-    chainName: 'deepbrainchaintestnet',
+    chainName: 'bsctestnet',
     standard: 'EvmHypCollateral',
     decimals: 18,
-    # logoURI: '/deployments/warp_routes/USDT/logo.svg',
-    symbol: 'DGC',
-    name: 'DecentralGPT',
-    addressOrDenom: "0xCB6913B40F56e1482b662c337A366Cc8d6f12e51",
-    collateralAddressOrDenom: "0xC260ed583545d036ed99AA5C76583a99B7E85D26",
-    connections: [{ token: 'ethereum|bsctestnet|0xD744eB383CF4a695844bC0f93469C8C000046429' }]
+    logoURI: '/deployments/warp_routes/USDT/logo.svg',
+    symbol: 'USDT',
+    name: 'USDT Token',
+    addressOrDenom: "0xaDD53E6e29B051549c3b2D66E697Ab8E36B863c2",
+    collateralAddressOrDenom: "0x337610d27c682e347c9cd60bd4b3b107c9d34ddd",
+    connections: [{ token: 'ethereum|deepbrainchaintestnet|0xE641fc6b6C129Ee6016A4194D04253001D433cA3' }]
   },
   {
-    chainName: 'bsctestnet',
+    chainName: 'deepbrainchaintestnet',
     standard: 'EvmHypSynthetic',
     decimals: 18,
-    # logoURI: '/deployments/warp_routes/USDT/logo.svg',
-    symbol: 'DGC',
-    name: 'DecentralGPT',
-    addressOrDenom: "0xD744eB383CF4a695844bC0f93469C8C000046429",
-    connections: [{ token: 'ethereum|deepbrainchaintestnet|0xCB6913B40F56e1482b662c337A366Cc8d6f12e51' }]
+    logoURI: '/deployments/warp_routes/USDT/logo.svg',
+    symbol: 'USDT',
+    name: 'USDT Token',
+    addressOrDenom: "0xE641fc6b6C129Ee6016A4194D04253001D433cA3",
+    connections: [{ token: 'ethereum|bsctestnet|0xaDD53E6e29B051549c3b2D66E697Ab8E36B863c2' }]
   }
 ]
 options: {}
