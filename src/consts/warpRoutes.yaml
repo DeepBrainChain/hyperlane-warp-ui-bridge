@@ -24,4 +24,5 @@ tokens: [
     addressOrDenom: "0x5155101187F8Faa1aD8AfeC7820c801870F81D52",
     connections: [{ token: 'ethereum|bsc|0xF528Aa0c86cBBbBb4288ecb8133D317DD528FD88' }]
   }
+]
 options: {}

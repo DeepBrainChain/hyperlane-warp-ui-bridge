@@ -1,0 +1,15 @@
+services:
+  warp-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    stop_grace_period: 5m
+    container_name: 'hyperlane-warp-ui'
+    ports:
+      - 3000:3000
+    environment:
+      NEXT_PUBLIC_WALLET_CONNECT_ID:
+    command:
+      - yarn
+      - dev
