@@ -2,5 +2,26 @@
 # These configs will be merged with the warp routes in the configured registry
 # The input here is typically the output of the Hyperlane CLI warp deploy command
 ---
-tokens: []
+tokens: [
+  {
+    chainName: 'bsc',
+    standard: 'EvmHypCollateral',
+    decimals: 18,
+    logoURI: '/deployments/warp_routes/USDT/logo.svg',
+    symbol: 'USDT',
+    name: 'Tether USD',
+    addressOrDenom: "0xF528Aa0c86cBBbBb4288ecb8133D317DD528FD88",
+    collateralAddressOrDenom: "0x55d398326f99059fF775485246999027B3197955",
+    connections: [{ token: 'ethereum|deepbrainchain|0x5155101187F8Faa1aD8AfeC7820c801870F81D52' }]
+  },
+  {
+    chainName: 'deepbrainchain',
+    standard: 'EvmHypSynthetic',
+    decimals: 18,
+    logoURI: '/deployments/warp_routes/USDT/logo.svg',
+    symbol: 'USDT',
+    name: 'Tether USD',
+    addressOrDenom: "0x5155101187F8Faa1aD8AfeC7820c801870F81D52",
+    connections: [{ token: 'ethereum|bsc|0xF528Aa0c86cBBbBb4288ecb8133D317DD528FD88' }]
+  }
 options: {}
