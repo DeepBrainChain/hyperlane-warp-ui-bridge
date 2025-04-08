@@ -1,4 +1,5 @@
 import {
+  bsc,
   eclipsemainnet,
   eclipsemainnetAddresses,
   ethereum,
@@ -53,5 +54,11 @@ export const chains: ChainMap<ChainMetadata & { mailbox?: Address }> = {
     rpcUrls: process.env.NEXT_PUBLIC_ETHEREUM_RPC_URL
       ? [{ http: process.env.NEXT_PUBLIC_ETHEREUM_RPC_URL }]
       : ethereum.rpcUrls,
+  },
+  bsc: {
+    ...bsc,
+    rpcUrls: process.env.NEXT_PUBLIC_BSC_RPC_URL
+      ? [{ http: process.env.NEXT_PUBLIC_BSC_RPC_URL }]
+      : bsc.rpcUrls,
   },
 };

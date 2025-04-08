@@ -92,6 +92,7 @@ export const useStore = create<AppState>()(
         uri: config.registryUrl,
         branch: config.registryBranch,
         proxyUrl: config.registryProxyUrl,
+        authToken: config.authToken
       }),
       warpCore: new WarpCore(new MultiProtocolProvider({}), []),
       setWarpContext: ({ registry, chainMetadata, multiProvider, warpCore }) => {

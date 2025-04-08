@@ -7,6 +7,7 @@ const version = process?.env?.NEXT_PUBLIC_VERSION || '0.0.0';
 const registryUrl = process?.env?.NEXT_PUBLIC_REGISTRY_URL || undefined;
 const registryBranch = process?.env?.NEXT_PUBLIC_REGISTRY_BRANCH || undefined;
 const registryProxyUrl = process?.env?.NEXT_PUBLIC_GITHUB_PROXY || 'https://proxy.hyperlane.xyz';
+const authToken = process?.env?.NEXT_PUBLIC_AUTH_TOKEN || undefined;
 const walletConnectProjectId = process?.env?.NEXT_PUBLIC_WALLET_CONNECT_ID || '';
 const transferBlacklist = process?.env?.NEXT_PUBLIC_TRANSFER_BLACKLIST || '';
 const chainWalletWhitelists = JSON.parse(process?.env?.NEXT_PUBLIC_CHAIN_WALLET_WHITELISTS || '{}');
@@ -21,6 +22,7 @@ interface Config {
   registryUrl: string | undefined; // Optional URL to use a custom registry instead of the published canonical version
   registryBranch?: string | undefined; // Optional customization of the registry branch instead of main
   registryProxyUrl?: string; // Optional URL to use a custom proxy for the GithubRegistry
+  authToken?: string | undefined; // Optional authToken to use a token for the GithubRegistry
   showAddRouteButton: boolean; // Show/Hide the add route config icon in the button strip
   showAddChainButton: boolean; // Show/Hide add custom chain in the chain search menu
   showDisabledTokens: boolean; // Show/Hide invalid token options in the selection modal
@@ -42,6 +44,7 @@ export const config: Config = Object.freeze({
   registryUrl,
   registryBranch,
   registryProxyUrl,
+  authToken,
   showAddRouteButton: true,
   showAddChainButton: true,
   showDisabledTokens: false,

@@ -11,6 +11,9 @@ services:
     environment:
       #- NODE_ENV=production
       - NEXT_PUBLIC_WALLET_CONNECT_ID=
+      - NEXT_PUBLIC_BSC_RPC_URL=https://bsc-dataseed1.bnbchain.org
+      - NEXT_PUBLIC_GITHUB_PROXY=
+      - NEXT_PUBLIC_AUTH_TOKEN=
     command:
       - yarn
       #- start
