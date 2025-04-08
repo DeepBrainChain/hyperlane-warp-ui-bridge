@@ -1,10 +1,10 @@
 import {
   bsc,
-  eclipsemainnet,
-  eclipsemainnetAddresses,
-  ethereum,
-  solanamainnet,
-  solanamainnetAddresses,
+  // eclipsemainnet,
+  // eclipsemainnetAddresses,
+  // ethereum,
+  // solanamainnet,
+  // solanamainnetAddresses,
 } from '@hyperlane-xyz/registry';
 import { ChainMap, ChainMetadata } from '@hyperlane-xyz/sdk';
 
@@ -13,19 +13,19 @@ import { ChainMap, ChainMetadata } from '@hyperlane-xyz/sdk';
 // Chains already in the SDK need not be included here unless you want to override some fields
 // Schema here: https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/typescript/sdk/src/metadata/chainMetadataTypes.ts
 export const chains: ChainMap<ChainMetadata & { mailbox?: Address }> = {
-  solanamainnet: {
-    ...solanamainnet,
-    // SVM chains require mailbox addresses for the token adapters
-    mailbox: solanamainnetAddresses.mailbox,
-    // Including a convenient rpc override because the Solana public RPC does not allow browser requests from localhost
-    rpcUrls: process.env.NEXT_PUBLIC_SOLANA_RPC_URL
-      ? [{ http: process.env.NEXT_PUBLIC_SOLANA_RPC_URL }]
-      : solanamainnet.rpcUrls,
-  },
-  eclipsemainnet: {
-    ...eclipsemainnet,
-    mailbox: eclipsemainnetAddresses.mailbox,
-  },
+  // solanamainnet: {
+  //   ...solanamainnet,
+  //   // SVM chains require mailbox addresses for the token adapters
+  //   mailbox: solanamainnetAddresses.mailbox,
+  //   // Including a convenient rpc override because the Solana public RPC does not allow browser requests from localhost
+  //   rpcUrls: process.env.NEXT_PUBLIC_SOLANA_RPC_URL
+  //     ? [{ http: process.env.NEXT_PUBLIC_SOLANA_RPC_URL }]
+  //     : solanamainnet.rpcUrls,
+  // },
+  // eclipsemainnet: {
+  //   ...eclipsemainnet,
+  //   mailbox: eclipsemainnetAddresses.mailbox,
+  // },
   // mycustomchain: {
   //   protocol: ProtocolType.Ethereum,
   //   chainId: 123123,
@@ -49,12 +49,12 @@ export const chains: ChainMap<ChainMetadata & { mailbox?: Address }> = {
   //   },
   //   logoURI: '/logo.svg',
   // },
-  ethereum: {
-    ...ethereum,
-    rpcUrls: process.env.NEXT_PUBLIC_ETHEREUM_RPC_URL
-      ? [{ http: process.env.NEXT_PUBLIC_ETHEREUM_RPC_URL }]
-      : ethereum.rpcUrls,
-  },
+  // ethereum: {
+  //   ...ethereum,
+  //   rpcUrls: process.env.NEXT_PUBLIC_ETHEREUM_RPC_URL
+  //     ? [{ http: process.env.NEXT_PUBLIC_ETHEREUM_RPC_URL }]
+  //     : ethereum.rpcUrls,
+  // },
   bsc: {
     ...bsc,
     rpcUrls: process.env.NEXT_PUBLIC_BSC_RPC_URL
